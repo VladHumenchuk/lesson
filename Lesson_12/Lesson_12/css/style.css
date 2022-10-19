@@ -1,0 +1,116 @@
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+  background-color: rgb(9, 0, 41);
+}
+
+/* ----------------HOVER-------------------------- */
+body:hover .block__fon-footer::after {
+  transform: translate(-50%, 0%) scale(1) rotate(-20deg);
+  transition-duration: 8s;
+}
+body:hover .block__fon-header::after {
+  transform: scale(0.4) rotate(-360deg);
+  transform-origin: center;
+  transition-duration: 25s;
+}
+body:hover .block__fon-header::before {
+  /* left: 80%;
+  transform: scale(0.4) rotate(0deg); */
+  transition-duration: 10s;
+  transform: translate(-450px, 500px) scale(0.8) rotate(10deg);
+}
+body:hover .block__fon-footer::before {
+  transition-duration: 10s;
+  transform: translate(-500%, 100px) scale(0.4) rotate(50deg)
+    skew(0deg, -100deg);
+}
+body:hover .fon-footer__gora-left {
+  opacity: 1;
+  transition-duration: 5s;
+}
+body:hover .fon-footer__gora-right {
+  transform: translate(20%, -190%) scale(0.6);
+  opacity: 1;
+  transition-duration: 5s;
+}
+/* ====================================================== */
+/* ----------------fon-footer-------------------------- */
+.block__fon-footer {
+  position: relative;
+  max-height: 100vh;
+  z-index: 100;
+  overflow: hidden;
+}
+.block__fon-footer img {
+  height: auto;
+}
+.block__fon-footer::after {
+  content: '';
+  display: block;
+  background: url(../img/Планета.svg) no-repeat;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 100%) scale(0.2);
+
+  z-index: -1;
+}
+.block__fon-footer::before {
+  content: '';
+  display: block;
+  background: url(../img/комета\ маленька.svg) no-repeat;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 80%;
+  transform: translate(-150px, -200px) scale(0.4) rotate(45deg);
+}
+/* ====================================================== */
+/* ----------------fon-header-------------------------- */
+.block__fon-header {
+  position: absolute;
+  min-height: 100vh;
+  z-index: 1;
+  min-width: 100vw;
+}
+.block__fon-header img {
+  height: 100%;
+}
+.block__fon-header::after {
+  content: '';
+  display: block;
+  background: url(../img/планета-міні.svg) no-repeat;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  transform: scale(0.1) rotate(0deg);
+}
+
+.block__fon-header::before {
+  content: '';
+  display: block;
+  background: url(../img/комета-велика.svg) no-repeat;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 80%;
+  transform: translate(150px, -200px) scale(0.4) rotate(0deg);
+}
+
+.fon-footer__gora-left {
+  transform: translate(-25%, -70%) scale(0.5);
+  opacity: 0;
+}
+.fon-footer__gora-right {
+  transform: translate(20%, -190%) scale(0.6);
+  opacity: 0;
+  z-index: 4;
+}
