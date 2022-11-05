@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/img/min-logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/contacts.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
+    <script defer src="./index.js"></script>
+    <title>Contacts</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="./index.html">
+            <div class="header__logo">
+              <img src="./img/logo.svg" alt="logo" />
+            </div>
+          </a>
+          <div class="header__menu menu-header">
+            <ul class="menu-header__list menu-header__list-active">
+              <li class="menu-header__item">
+                <a href="./index.html" class="menu-header__link">About Us</a>
+              </li>
+              <li class="menu-header__item">
+                <a href="#" class="menu-header__link">Courses</a>
+              </li>
+              <li class="menu-header__item">
+                <a href="#" class="menu-header__link">Events</a>
+              </li>
+              <li class="menu-header__item">
+                <a href="#" class="menu-header__link">Blog</a>
+              </li>
+              <li class="menu-header__item">
+                <a href="./contacts.html" class="menu-header__link">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__burger"><span></span></div>
+          <div class="header__active">
+            <div class="button-orange">
+              <span>Get consultation</span>
+            </div>
+            <div class="header__log-in">
+              <span>Log in / Register</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="contact-info">
+          <div class="contact-info__container">
+            <div class="contact-info__body">
+              <div class="contact-info__title">Contact info</div>
+              <h4 class="contact-info__sub-title">Get in touch</h4>
+              <div class="contact-info__full-contacts">
+                <div class="contact-info__contacs">
+                  <div class="contact-info__name">Talk to us:</div>
+                  <div class="contact-info__value">hello@createx.com</div>
+                </div>
+                <div class="contact-info__contacs">
+                  <div class="contact-info__name">Call us:</div>
+                  <div class="contact-info__value">(405) 555-0128</div>
+                </div>
+                <div class="contact-info__contacs">
+                  <div class="contact-info__name">Address:</div>
+                  <div class="contact-info__value">
+                    Nezalezhnosti Street, 53A, Kalynivka, Vinnytsia Region,
+                    22400
+                  </div>
+                </div>
+              </div>
+              <div class="contact-info__flow-text">Follow us:</div>
+              <div class="contact-info__follow createx__links">
+                <a
+                  href="https://www.facebook.com/Vladhomen"
+                  target="_blank"
+                  class="contact-info__img"
+                >
+                  <img
+                    src="./img/footer/Facebook.svg"
+                    alt="non"
+                    class="createx__img"
+                  />
+                </a>
+                <a href="#" target="_blank" class="contact-info__img">
+                  <img
+                    src="./img/footer/Twitter.svg"
+                    alt="non"
+                    class="createx__img"
+                  />
+                </a>
+                <a href="#" target="_blank" class="contact-info__img">
+                  <img
+                    src="./img/footer/YouTube.svg"
+                    alt="non"
+                    class="createx__img"
+                /></a>
+                <a href="#" target="_blank" class="contact-info__img">
+                  <img
+                    src="./img/footer/telegram.svg"
+                    alt="non"
+                    class="createx__img"
+                /></a>
+                <a href="#" target="_blank" class="contact-info__img">
+                  <img
+                    src="./img/footer/Instagram.svg"
+                    alt="non"
+                    class="createx__img"
+                /></a>
+                <a
+                  href="https://www.linkedin.com/in/vladyslav-humenchuk/"
+                  target="_blank"
+                  class="contact-info__img"
+                >
+                  <img
+                    src="./img/footer/Linked-In.svg"
+                    alt="non"
+                    class="createx__img"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="contact-info__maps">
+              <div id="info-map" class="contact-info__liflet-map"></div>
+            </div>
+          </div>
+        </section>
+        <!-- ============================================================= -->
+        <section class="any-questions">
+          <div class="any-questions__container">
+            <div class="any-questions__pictchers">
+              <img src="./img/contacts/illustration.svg" alt="non" />
+            </div>
+            <div class="any-questions__body">
+              <div class="any-questions__title contact-info__title">
+                Any questions?
+              </div>
+              <h4 class="any-questions__sub-title contact-info__sub-title">
+                Drop us a line
+              </h4>
+              <form
+                action="https://jsonplaceholder.typicode.com/posts"
+                method="post"
+                class="any-questions__form form"
+              >
+                <div class="form__header">
+                  <div class="form__blok">
+                    <label for="firstname">First Name*</label>
+                    <input
+                      id="firstname"
+                      type="text"
+                      name="firstName"
+                      required
+                      placeholder="Your first name"
+                    />
+                  </div>
+                  <div class="form__blok">
+                    <label for="lastName">Last Name*</label>
+                    <input
+                      id="lastName"
+                      type="text"
+                      name="lastName"
+                      required
+                      placeholder="Your last name"
+                    />
+                  </div>
+                  <div class="form__blok">
+                    <label for="email">Email*</label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="lastName"
+                      required
+                      placeholder="Your working email"
+                    />
+                  </div>
+                  <div class="form__blok">
+                    <label for="tel">Phone</label>
+                    <input
+                      id="tel"
+                      type="tel"
+                      name="tel"
+                      placeholder="Your phone number"
+                    />
+                  </div>
+                </div>
+                <div class="form__body">
+                  <label for="masseg">Message*</label>
+                  <textarea name="masseg" id="masseg"></textarea>
+                </div>
+                <div class="form__footer">
+                  <div class="form__burd">
+                    <input
+                      class="form__input"
+                      type="checkbox"
+                      name="onlineSchool"
+                      id="burd"
+                    />
+                    <label class="form__leable" for="burd"
+                      ><span class="form__text"
+                        >I agree to receive communications from Createx Online
+                        School</span
+                      >
+                    </label>
+                  </div>
+                  <button class="form__button button-orange" type="submit">
+                    Send message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <!-- bleck-footer============================================================== -->
+        <section class="black-footer">
+          <div class="black-footer__container">
+            <div class="black-footer__createx createx">
+              <div class="createx__logo">
+                <img src="./img/footer/logo.svg" alt="logo" class="" />
+              </div>
+              <div class="createx__paragraf">
+                Createx Online School is a leader in online studying. We have
+                lots of courses and programs from the main market experts.
+                We provide relevant approaches to online learning, internships
+                and employment in the largest companies in the country.
+              </div>
+              <div class="createx__links">
+                <a
+                  href="https://www.facebook.com/Vladhomen"
+                  target="_blank"
+                  class=""
+                >
+                  <img
+                    src="./img/footer/Facebook.svg"
+                    alt="non"
+                    class="createx__img"
+                  />
+                </a>
+                <img
+                  src="./img/footer/Twitter.svg"
+                  alt="non"
+                  class="createx__img"
+                />
+                <img
+                  src="./img/footer/YouTube.svg"
+                  alt="non"
+                  class="createx__img"
+                />
+                <img
+                  src="./img/footer/telegram.svg"
+                  alt="non"
+                  class="createx__img"
+                />
+                <a href="#">
+                  <img
+                    src="./img/footer/Instagram.svg"
+                    alt="non"
+                    class="createx__img"
+                /></a>
+                <a
+                  href="https://www.linkedin.com/in/vladyslav-humenchuk/"
+                  target="_blank"
+                >
+                  <img
+                    src="./img/footer/Linked-In.svg"
+                    alt="non"
+                    class="createx__img"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="black-footer__centr">
+              <div class="black-footer__site-map site-map">
+                <div class="site-map__title">SITE MAP</div>
+                <ul class="site-map__list">
+                  <li><a href="#"></a>About Us</li>
+                  <li><a href="#"></a>Courses</li>
+                  <li><a href="#"></a>Events</li>
+                  <li><a href="#"></a>Blog</li>
+                  <li><a href="#"></a>Contacts</li>
+                </ul>
+              </div>
+              <div class="black-footer__courses site-map">
+                <div class="site-map__title">COURSES</div>
+                <ul class="site-map__list">
+                  <li><a href="#"></a>Marketing</li>
+                  <li><a href="#"></a>Management</li>
+                  <li><a href="#"></a>HR & Recruting</li>
+                  <li><a href="#"></a>Design</li>
+                  <li><a href="#"></a>Development</li>
+                </ul>
+              </div>
+              <div class="black-footer__contact-us site-map">
+                <div class="site-map__title">CONTACT US</div>
+                <ul class="site-map__list">
+                  <li>
+                    <a class="site-map__item--before-1" href="#"></a>(405)
+                    555-0128
+                  </li>
+                  <li>
+                    <a class="site-map__item--before-2" href="#"></a
+                    >hello@createx.comt
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="black-footer__sing-to-our sing-to-our">
+              <div class="sing-to-our__title site-map__title">
+                SIGN UP TO OUR NEWSLETTER
+              </div>
+              <form
+                class="sing-to-our__form"
+                action="https://jsonplaceholder.typicode.com/posts"
+                method="POST"
+              >
+                <input
+                  placeholder="Email address"
+                  type="email"
+                  name="email-2"
+                  id="email-2"
+                />
+              </form>
+              <p class="sing-to-our__paragraf">
+                *Subscribe to our newsletter to receive communications and early
+                updates from Createx SEO Agency.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- grey-footer============================================================== -->
+        <section class="gray-footer">
+          <div class="gray-footer__container">
+            <div class="gray-footer__left">
+              <div class="gray-footer__text">
+                © All rights reserved.Made with
+              </div>
+              <div class="gray-footer__name">by Vladyslav Humenchuk</div>
+            </div>
+            <div class="gray-footer__right"><a href="#">GO TO TOP</a></div>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>

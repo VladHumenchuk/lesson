@@ -1,0 +1,50 @@
+.button-orange {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+  border-radius: 4px;
+  padding: 16px 40px;
+  cursor: pointer;
+}
+.button-orange span {
+}
+.button-orange:hover {
+  outline: 1px solid gray;
+}
+.button-border-orange {
+  background: transparent;
+  border: 1px solid #f75e05;
+  color: #ff3f3a;
+  padding: 15px 40px;
+}
+.button-border-orange span {
+}
+
+/* Заголовки тексту */
+.head-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1e212c;
+}
+
+.head-title__header {
+}
+.head-title__litl-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.head-title__title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;
+}
