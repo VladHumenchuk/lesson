@@ -1,0 +1,34 @@
+::-webkit-scrollbar {
+  width: 12px; /* ширина для вертикального скролла */
+  height: 12px; /* высота для горизонтального скролла */
+
+  background: rgba(46, 139, 86, 0.445);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(46, 139, 87);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* ползунок скроллбара при наведенні  */
+  background: rgb(68, 133, 96);
+}
+::-webkit-scrollbar-button:vertical:start:decrement {
+  /* стрелки */
+  background: rgb(46, 139, 87);
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  /* стрелки */
+  background: rgb(46, 139, 87);
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+  /* стрелки */
+  background: rgb(46, 139, 87);
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+  /* стрелки */
+  background: rgb(46, 139, 87);
+}
