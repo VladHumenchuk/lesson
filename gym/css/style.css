@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
+body {
+  font-family: 'Comfortaa';
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.fon {
+  /* width: 100%; */
+  height: 100vh;
+  position: relative;
+}
+.fon__imege {
+  position: absolute;
+  background: url(../img/3d-rendering-modern-loft-gym-fitness.jpg) center /
+    cover no-repeat;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+}
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.fon__content {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+.content__container {
+  background-color: rgb(236, 235, 235);
+  border-radius: 10px;
+  padding: 40px 30px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.452);
+}
+.content__text-block {
+  margin-bottom: 40px;
+  position: relative;
+}
+.content__title {
+  font-weight: 700;
+  font-size: 26px;
+  align-self: center;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.content__sub-title {
+  font-weight: 400;
+  font-size: 20px;
+  align-self: center;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+.content__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  align-self: center;
+}
+.content__conclusion {
+  background-color: rgb(253, 213, 138);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  font-weight: 700;
+  z-index: 3;
+  opacity: 1;
+  transition-duration: 0.3s;
+  padding: 15px;
+}
+.content__hrest {
+  width: 20px;
+  height: 20px;
+  background: url(../img/hrest.png) center/cover no-repeat;
+  z-index: 4;
+  position: absolute;
+  display: inline-flex;
+  top: 6px;
+  right: 10px;
+  transition-duration: 0.2s;
+}
+.content__hrest:hover {
+  transform: scale(1.1);
+}
+.hiden-content {
+  display: none;
+  opacity: 0;
+}
+.content__sub-count {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.content__form {
+  align-self: center;
+}
+.form {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  align-self: center;
+  background-color: white;
+  padding: 35px 10px;
+  border-radius: 4px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.form__block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.form__label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.form__input {
+  padding: 10px 15px;
+  border: 2px solid gold;
+  border-radius: 4px;
+}
+.form__input:focus {
+  outline: 2px solid gold;
+  box-shadow: 1px 1px 5px rgba(255, 217, 0, 0.212);
+}
+.form__input::placeholder {
+  font-size: 14px;
+}
+.form__button {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  padding: 15px 30px;
+  background-color: gold;
+  border-radius: 7px;
+  transition-duration: 0.3s;
+}
+.form__button:hover {
+  background-color: rgb(219, 201, 100);
+}
+@media (max-width: 592px) {
+  .content__container {
+    padding: 20px 20px;
+  }
+  .content__title {
+    font-size: 22px;
+    margin-bottom: 7px;
+  }
+  .content__sub-title {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  .content__text {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  .content__sub-count {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+  .content__form {
+    align-self: center;
+  }
+  .form {
+    font-size: 16px;
+    padding: 25px 10px;
+    width: 100%;
+    gap: 18px;
+  }
+  .form__block {
+    gap: 2px;
+    flex-direction: column;
+  }
+
+  .form__button {
+    font-size: 16px;
+  }
+  .form__button:hover {
+    background-color: rgb(219, 201, 100);
+  }
+}

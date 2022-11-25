@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./scrypt.js"></script>
+    <title>Gym</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <section class="fon">
+          <div class="fon__imege"></div>
+          <div class="fon__content content">
+            <div class="content__container">
+              <h1 class="content__title">Індекс маси тіла (ІМТ)</h1>
+              <h6 class="content__sub-title">(онлайн калькулятор)</h6>
+              <div class="content__text-block">
+                <p class="content__text">
+                  Індекс маси тіла (ІМТ) - це розрахункова величина, яка
+                  дозволяє орієнтовно оцінити ступінь відповідності маси людини
+                  та її зросту. Таке співвідношенням може дати інформацію проте,
+                  чи є маса недостатньою, нормальною, надмірною.
+                </p>
+                <div class="content__conclusion  hiden-content">
+									<div class="content__text-conclusion"></div>
+                  <div class="content__hrest"></div>
+                </div>
+              </div>
+              <div class="content__sub-count">
+                Розраховуємо Індекс Маси Тіла (ІМТ) онлайн:
+              </div>
+              <form
+                class="content__form form"
+                method="POST"
+                action="multipart/form-data"
+              >
+                <div class="form__block">
+                  <label class="form__label" for="vag"
+                    >Вкажіть вашу вагу (кг.) :</label
+                  >
+                  <input
+                    class="form__input"
+                    required
+                    id="vag"
+                    placeholder="Моя вага (кг)"
+                    type="text"
+                  />
+                </div>
+                <div class="form__block">
+                  <label class="form__label" for="rist"
+                    >Вкажіть ваш ріст (см.) :</label
+                  >
+                  <input
+                    class="form__input"
+                    required
+                    id="rist"
+                    placeholder="Мій ріст (cm)"
+                    type="text"
+                  />
+                </div>
+                <button class="form__button" type="button">
+                  Розрахувати мій IMT
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
